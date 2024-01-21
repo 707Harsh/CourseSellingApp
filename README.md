@@ -43,12 +43,12 @@ Then you may use a tool such as Postman to hit various endpoints which are menti
 - POST /admin/courses  
   Description: Creates a new course.  
   Input: Headers: { 'Authorization': 'Bearer <your-token>' }  
-  Body: { title: 'course title', description: 'course description', price: 100, imageLink: 'https://linktoimage.com' }  
+  Body: { title: 'course title', description: 'course description', price: 100, imageLink: 'url of any image' }  
   Output: { message: 'Course created successfully', courseId: "new course id" }
 - GET /admin/courses  
   Description: Returns all the courses.  
   Input: Headers: { 'Authorization': 'Bearer <your-token>' }  
-  Output: { courses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'https://linktoimage.com'}] }
+  Output: { courses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'url of any image'}] }
 
 ### User routes
 
@@ -63,7 +63,7 @@ Then you may use a tool such as Postman to hit various endpoints which are menti
 - GET /users/courses  
   Description: Lists all the courses.  
   Input: Headers: { 'Authorization': 'Bearer <your-token>' }  
-  Output: { courses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'https://linktoimage.com' }, ... ] }
+  Output: { courses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'url of any image' }, ... ] }
 - POST /users/courses/:courseId  
   Description: Purchases a course. courseId in the URL path should be replaced with the ID of the course to be purchased.  
   Input: Headers: { 'Authorization': 'Bearer <your-token>' }  
@@ -71,4 +71,4 @@ Then you may use a tool such as Postman to hit various endpoints which are menti
 - GET /users/purchasedCourses  
   Description: Lists all the courses purchased by the user.  
   Input: Headers: { 'Authorization': 'Bearer <your-token>' }  
-  Output: { purchasedCourses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'https://linktoimage.com'}] }
+  Output: { purchasedCourses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'url of any image'}] }
